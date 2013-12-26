@@ -96,6 +96,7 @@
 			    fill('/web/heads', '#heads');
 			    fill('/web/verified_tails', '#verified_tails');
 			    fill('/web/tails', '#tails');
+			    fill('../web/my_share_hashes', '#my_share_hashes');
 			}
                         var plot1;
                         var plot2;
@@ -263,7 +264,7 @@
 				      <li id="scale3"><a href="javascript:ChangeCurrentPeriod('week', 'scale3');">Week</a></li>
 				      <li id="scale4"><a href="javascript:ChangeCurrentPeriod('month', 'scale4');">Month</a></li>
 				      <li id="scale5"><a href="javascript:ChangeCurrentPeriod('year', 'scale5');">Year</a></li>
-				      <li><input type="checkbox" name="autorefresh" id="autorefresh" /><label for="autorefresh">Auto-refresh</label></li>
+				      <li><input type="checkbox" name="autorefresh" id="autorefresh" checked /><label for="autorefresh">Auto-refresh</label></li>
 				    </ul>
 				  </div>
 				</div>
@@ -287,25 +288,34 @@
 							  <td><span id="payout_amount" class="label"></span> <span class="symbol"></span></td>
 							</tr>
 							<tr>
+
 							<tr>
 							  <td><h5>Pool rate</h5></td>
 							  <td><span id="pool_rate" class="label label-inverse"></span> (<span id="pool_stale"></span> DOA+orphan)</td>
 							  <td></td>
 							  <td><h5>Share difficulty</h5></td>
 							  <td><span id="difficulty" class="label label-inverse"></span></td>
+							  
 							</tr>
+
+
 							<tr>
 							  <td><h5>Node uptime</h5></td>
 							  <td><span id="uptime_days" class="label label-inverse"></span> (<span id="uptime_hours"></span> hours)</td>
 							  <td></td>
 							  <td><h5>Peers</h5></td>
 							  <td><span id="peers_out"></span> out, <span id="peers_in"></span> in</td>
+
 							</tr>
 							  <td><h5>Current block value</h5></td>
 							  <td><span id="block_value" class="label label-inverse"></span> <span class="symbol"></span></td>
 							  <td></td>
 							  <td><h5>Expected time to block</h5></td>
 							  <td><span id="time_to_block" class="label"></span></td>
+							</tr>
+							<tr>
+							<td><h5>Expected after mining for 24 hours</h5></td>
+                                                        <td><span id="expected_payout_amount" class="label"></span> <span class="symbol"></span> per block.</td>
 							</tr>
 						</tbody>
 					</table>
@@ -330,6 +340,7 @@
 			<p>Heads: <span id="heads"></span></p>
 			<p>Verified tails: <span id="verified_tails"></span></p>
 			<p>Tails: <span id="tails"></span></p>
+			<p>My Shares: <span id="my_share_hashes"></span></p>
 		</div>
 	  	<div class="tab-pane" id="lastblocks">
 			<table id="blocks" class="table table-striped table-hover">

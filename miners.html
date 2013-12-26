@@ -12,7 +12,12 @@
 		<script src="js/bootstrap.min.js"></script>
 		<script language="javascript" type="text/javascript" src="js/jquery.jqplot.min.js"></script>
 		<script class="include" language="javascript" type="text/javascript" src="js/jqplot.pieRenderer.min.js"></script>
-	    <style>
+
+
+
+
+	    
+<style>
 			body {
 				padding-top: 60px;
 			}
@@ -42,6 +47,9 @@
 				$('#' + p_Sender).addClass('active');
 				document.location.href =  "?" + period;
 			}
+
+	
+		
         </script>
     </head>
     
@@ -67,7 +75,7 @@
 		  </div>
 		</div>
         <center>
-			<div class="navbar" style="width: 440px;">
+			<div class="navbar" style="width: 460px;">
 			  <div class="navbar-inner">
 				<a class="brand" href="javascript:void(0)">Scale</a>
 				<ul class="nav" id="scale_menu">
@@ -76,6 +84,7 @@
 				  <li id="scaleWeek"><a href="javascript:ChangeCurrentPeriod('Week', 'scaleWeek');">Week</a></li>
 				  <li id="scaleMonth"><a href="javascript:ChangeCurrentPeriod('Month', 'scaleMonth');">Month</a></li>
 				  <li id="scaleYear"><a href="javascript:ChangeCurrentPeriod('Year', 'scaleYear');">Year</a></li>
+				
 				</ul>
 			  </div>
 			</div>
@@ -486,5 +495,7 @@
                 });
             }
         </script>
+
+        
     </body>
 </html>
