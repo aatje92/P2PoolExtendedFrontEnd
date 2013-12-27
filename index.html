@@ -40,6 +40,7 @@
         <div class="nav-collapse collapse">
           <ul class="nav">
             <li class="active"><a href="index.html">Pool stats</a></li>
+	    <li><a href="miners.html">Miner Graphs</a></li>
             <li><a href="graphs.html">Graphs</a></li>
             <li><a id="mailto" href="">Contact</a></li>
           </ul>
@@ -169,7 +170,7 @@
     $(document).ready(function() {
       LoadData();
       UpdateData();
-      setInterval("AutoRefresh()", 5 * 1000);
+      setInterval("AutoRefresh()", 5 * 1000);      
       $('#myTab a:first').tab('show');
       fixContact();
     });

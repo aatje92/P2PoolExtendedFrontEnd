@@ -178,6 +178,7 @@ function ChangeCurrentPeriod(p_Period, p_Sender) {
 
 function AutoRefresh() {
   if($("#autorefresh").prop('checked')) {
-    UpdateData();
+     UpdateData();
+ 
   }
 }
