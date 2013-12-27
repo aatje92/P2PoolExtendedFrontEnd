@@ -38,8 +38,14 @@ function LoadData() {
       tr.append('td').append('a').text(function(block){return block.hash}).attr('href', function(block){return currency_info.block_explorer_url_prefix + block.hash});
       tr.append('td').append('a').text('>').attr('href', function(block){return 'share.html#' + block.share});
     });
+ d3.json('/fee', function(current_fee) {
+			    	fee = Number(current_fee);
+					d3.selectAll('#current_fee').text(fee.toFixed(2) + "%");
+			    }); 
+
   });
- 
+
+
   $("#best_share").html("");
   $("#verified_heads").html("");
   $("#heads").html("");
@@ -91,8 +97,8 @@ function UpdateData() {
       .attr('style', 'color:red;border:1px solid red;padding:5px');
 
     var time_to_share = local_stats.attempts_to_share/local;
-    d3.select('#time_to_share').text(d3.format('.3r')(time_to_share/3600) + " hours");
-    d3.select('#time_to_share_minute').text(d3.format('.3r')(time_to_share / 60) + " ");
+    d3.select('#time_to_share').text(d3.format('.3r')(time_to_share / 3600) + " hours");
+    d3.select('#time_to_share_minute').text(d3.format('.3r')(time_to_share / 60) + " minutes");
 
     d3.json('/global_stats', function(global_stats) {
       d3.select('#pool_rate').text(d3.format('.3s')(global_stats.pool_hash_rate) + 'H/s');
