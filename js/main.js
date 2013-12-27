@@ -97,7 +97,7 @@ function UpdateData() {
       .attr('style', 'color:red;border:1px solid red;padding:5px');
 
     var time_to_share = local_stats.attempts_to_share/local;
-    d3.select('#time_to_share').text(d3.format('.3r')(time_to_share / 3600) + " hours");
+    d3.select('#time_to_share').text(d3.format('.3r')(time_to_share / 3.6) + " minutes");
     d3.select('#time_to_share_minute').text(d3.format('.3r')(time_to_share / 60) + " minutes");
 
     d3.json('/global_stats', function(global_stats) {
